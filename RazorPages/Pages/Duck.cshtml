@@ -1,0 +1,14 @@
+﻿@page
+@model RazorPages.Pages.Duck
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @foreach (var duck in Model.SomeDucks)
+    {
+        <div>@duck.Quack() from RazorPages!</div>
+    }
+</div>
